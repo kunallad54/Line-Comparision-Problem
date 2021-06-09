@@ -20,10 +20,13 @@ class calculatingLengthOfLine{
                 lengthOfLine2 = Math.sqrt((x4-x3)*(x4-x3)+(y4-y3)*(y4-y3));
 		String str1 = String.valueOf(lengthOfLine1);
 		String str2 = String.valueOf(lengthOfLine2);
-		if(str1.equals(str2))
+		if(str1.compareTo(str2) == 0)
 			System.out.println("The length of both line are equal");
-		else
-			System.out.println("The length of both line are not equal");
+		else if(str1.compareTo(str2)<0)
+			System.out.println("The length of line 1 is greater than lenght of line 2");
+		else if (str1.compareTo(str2)>0){
+			System.out.println("The lenght of line 1 is less than length of line 2");
+		}
 		System.out.println("The length of the first line is : "+lengthOfLine1);
 		System.out.println("The length of the second line is : "+lengthOfLine2);
 	}
